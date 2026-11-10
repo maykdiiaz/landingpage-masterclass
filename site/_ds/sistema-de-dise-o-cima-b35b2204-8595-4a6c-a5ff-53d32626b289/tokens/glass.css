@@ -1,0 +1,35 @@
+/* CIMA — vidrio (glassmorphism). Botones, tarjetas y pastillas sobre textura o fotografía.
+   Se adapta solo al tema: sobre oscuro es marfil translúcido; sobre papel, blanco lechoso. */
+
+:root,
+[data-theme="dark"] {
+  --glass-bg:           rgba(242, 240, 236, 0.07);
+  --glass-bg-hover:     rgba(242, 240, 236, 0.12);
+  --glass-bg-arena:     rgba(216, 195, 154, 0.18);
+  --glass-bg-arena-hover: rgba(216, 195, 154, 0.28);
+  --glass-border:       rgba(242, 240, 236, 0.18);
+  --glass-border-arena: rgba(216, 195, 154, 0.50);
+  --glass-highlight:    inset 0 1px 0 rgba(255, 255, 255, 0.14); /* @kind shadow */
+  --glass-shadow:       0 18px 48px rgba(0, 0, 0, 0.35);
+  --glass-text:         var(--cima-marfil);
+}
+
+[data-theme="light"] {
+  --glass-bg:           rgba(255, 255, 255, 0.42);
+  --glass-bg-hover:     rgba(255, 255, 255, 0.62);
+  --glass-bg-arena:     rgba(185, 162, 119, 0.20);
+  --glass-bg-arena-hover: rgba(185, 162, 119, 0.30);
+  --glass-border:       rgba(10, 10, 10, 0.10);
+  --glass-border-arena: rgba(142, 121, 80, 0.45);
+  --glass-highlight:    inset 0 1px 0 rgba(255, 255, 255, 0.75); /* @kind shadow */
+  --glass-shadow:       0 14px 36px rgba(60, 45, 20, 0.12);
+  --glass-text:         var(--cima-negro);
+}
+
+:root {
+  --glass-blur:        blur(24px) saturate(140%); /* @kind other */
+  --glass-radius:      28px;
+  --glass-radius-sm:   16px;
+  --glass-radius-pill: 999px;
+  --emphasis-on-light: #6B5A36; /* Arena tostada para énfasis sobre papel (5.9:1) */
+}

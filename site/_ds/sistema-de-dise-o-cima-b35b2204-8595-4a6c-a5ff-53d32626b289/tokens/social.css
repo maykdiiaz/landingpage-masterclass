@@ -1,0 +1,23 @@
+/* CIMA — redes sociales. Medidas a 1080px de ancho (feed, carrusel, story).
+   Diagramación sin vacíos: cabecera arriba, pie abajo, y el bloque de texto como UNA masa
+   compacta (huecos internos ≤ 56px). El primario se ajusta al ancho útil (fit) para llenar
+   la línea. El espacio sobrante es de la fotografía o desaparece al subir la escala; nunca queda
+   un hueco entre título y contenido. Tarjetas solo para encuestas o comparaciones reales. */
+
+:root {
+  /* REGLA DE TAMAÑO: el primario ocupa como máximo el 72% del ancho útil y nunca pasa de
+     210px. El bloque de título no supera ~40% del alto de la pieza. Si un título no cabe en
+     esa caja, se acorta el texto o se parte en dos líneas; no se agranda. */
+  --social-fill:        0.72; /* @kind other */
+  --social-primary-max: 210px; /* tope del primario */
+  --social-support:     72px;  /* apoyo del título */
+  --social-accent:      96px;  /* itálica Editorial New, opcional */
+  --social-lead:        42px;  /* bajada fuerte bajo el título */
+  --social-sub:         34px;  /* subtítulo */
+  --social-body:        32px;  /* cuerpo, listas */
+  --social-meta:        22px;  /* cabecera, pie, numeración */
+  --social-margin:      72px;
+  --social-block-gap:   48px;  /* hueco máximo entre grupos del bloque */
+  --social-leading-sub: 1.3;  /* @kind other */
+  --social-tracking-meta: 0.18em;
+}

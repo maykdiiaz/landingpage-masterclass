@@ -1,0 +1,43 @@
+/* CIMA — bordes, radios, sombras, texturas.
+   Principio: la marca es arquitectónica. Casi todo es recto. La sombra existe para
+   separar planos, nunca para simular relieve. Nada de neumorfismo ni brillos. */
+
+:root {
+  /* Radios — el sistema es esencialmente ortogonal */
+  --radius-none: 0px;
+  --radius-xs:   2px;
+  --radius-sm:   4px;   /* inputs, botones, chips */
+  --radius-md:   8px;   /* tarjetas de producto */
+  --radius-lg:   12px;  /* modales, paneles */
+  --radius-pill: 999px; /* solo tags y avatares */
+
+  --border-width: 1px;
+  --border-width-thick: 2px;
+  --rule-hairline: 1px solid var(--border-hairline);
+  --rule: 1px solid var(--border-default);
+  --rule-accent: 1px solid var(--border-accent);
+
+  /* Sombras — sobre oscuro son sombras de recorte; sobre claro, de papel */
+  --shadow-none: none;
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.24);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.28);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.32);
+  --shadow-lg: 0 24px 64px rgba(0, 0, 0, 0.44);
+  --shadow-accent: 0 0 0 1px var(--cima-arena-linea), 0 8px 32px rgba(216, 195, 154, 0.10);
+  --shadow-focus: 0 0 0 2px var(--surface-canvas), 0 0 0 4px var(--focus-ring);
+
+  /* Papel: sombra difusa y cálida para el tema claro */
+  --shadow-paper-sm: 0 1px 2px rgba(10, 10, 10, 0.06), 0 2px 8px rgba(10, 10, 10, 0.04);
+  --shadow-paper-md: 0 2px 4px rgba(10, 10, 10, 0.05), 0 12px 32px rgba(10, 10, 10, 0.08);
+
+  /* Grano — velo de textura para fondos planos, siempre por debajo de 0.05 */
+  --grain-opacity: 0.035; /* @kind other */
+  --grain-blend: overlay; /* @kind other */
+
+  /* Degradado de protección para texto sobre imagen */
+  --scrim-bottom: linear-gradient(to top, rgba(10,10,10,0.92) 0%, rgba(10,10,10,0.55) 38%, rgba(10,10,10,0) 78%); /* @kind other */
+  --scrim-full:   linear-gradient(to top, rgba(10,10,10,0.88) 0%, rgba(10,10,10,0.30) 100%); /* @kind other */
+
+  --blur-sm: blur(8px); /* @kind other */
+  --blur-md: blur(20px); /* @kind other */
+}

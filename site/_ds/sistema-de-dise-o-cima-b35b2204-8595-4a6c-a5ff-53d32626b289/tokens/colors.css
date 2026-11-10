@@ -1,0 +1,110 @@
+/* CIMA — color. Base + alias semánticos.
+   El sistema es dual: oscuro (por defecto) y claro. Ambos son igual de válidos. */
+
+:root {
+  /* --- Base: neutros --- */
+  --cima-negro:        #0A0A0A;  /* Negro profundo — fondo maestro */
+  --cima-carbon:       #1C1C1C;  /* Gris carbón — superficie elevada en oscuro */
+  --cima-carbon-2:     #262523;  /* Carbón cálido — superficie 2 */
+  --cima-piedra:       #8F877C;  /* Ceniza cálida — texto secundario, líneas */
+  --cima-piedra-claro: #BDB4A6;  /* Ceniza clara — texto terciario en oscuro */
+  --cima-marfil:       #F2F0EC;  /* Marfil — fondo maestro claro / texto en oscuro */
+  --cima-marfil-2:     #E7E4DD;  /* Marfil hundido — superficie 2 en claro */
+  --cima-blanco:       #FFFFFF;
+
+  /* --- Base: acento --- */
+  --cima-arena:        #D8C39A;  /* Arena Cima — acento único de marca */
+  --cima-arena-claro:  #E6D8B8;  /* Arena clara — hover sobre oscuro */
+  --cima-arena-hondo:  #B9A277;  /* Arena honda — press, arena sobre claro */
+  --cima-arena-tinte:  rgba(216, 195, 154, 0.12); /* velo de arena */
+  --cima-arena-linea:  rgba(216, 195, 154, 0.28);
+
+  /* --- Base: semánticos (uso funcional, nunca decorativo) --- */
+  --cima-exito:        #7C8F6B;
+  --cima-alerta:       #C9A227;
+  --cima-error:        #A5503F;
+  --cima-info:         #6B7F8F;
+
+  /* --- Alfas sobre oscuro --- */
+  --cima-alfa-04: rgba(242, 240, 236, 0.04);
+  --cima-alfa-08: rgba(242, 240, 236, 0.08);
+  --cima-alfa-14: rgba(242, 240, 236, 0.14);
+  --cima-alfa-28: rgba(242, 240, 236, 0.28);
+  --cima-alfa-56: rgba(242, 240, 236, 0.56);
+  /* --- Alfas sobre claro --- */
+  --cima-tinta-06: rgba(10, 10, 10, 0.06);
+  --cima-tinta-12: rgba(10, 10, 10, 0.12);
+  --cima-tinta-24: rgba(10, 10, 10, 0.24);
+  --cima-tinta-56: rgba(10, 10, 10, 0.56);
+}
+
+/* ============ TEMA OSCURO (por defecto) ============ */
+:root,
+[data-theme="dark"] {
+  --surface-canvas:   var(--cima-negro);
+  --surface-raised:   var(--cima-carbon);
+  --surface-sunken:   #050505;
+  --surface-card:     var(--cima-carbon);
+  --surface-inset:    var(--cima-carbon-2);
+  --surface-invert:   var(--cima-marfil);
+  --surface-overlay:  rgba(10, 10, 10, 0.78);
+
+  --text-primary:     var(--cima-marfil);
+  --text-secondary:   var(--cima-piedra-claro);
+  --text-muted:       var(--cima-piedra);
+  --text-accent:      var(--cima-arena);
+  --text-emphasis:    var(--cima-arena);  /* palabra clave del título */
+  --text-invert:      var(--cima-negro);
+  --text-on-accent:   var(--cima-negro);
+
+  --border-hairline:  var(--cima-alfa-08);
+  --border-default:   var(--cima-alfa-14);
+  --border-strong:    var(--cima-alfa-28);
+  --border-accent:    var(--cima-arena-linea);
+
+  --accent:           var(--cima-arena);
+  --accent-hover:     var(--cima-arena-claro);
+  --accent-press:     var(--cima-arena-hondo);
+  --accent-wash:      var(--cima-arena-tinte);
+
+  --field-bg:         rgba(242, 240, 236, 0.04);
+  --field-border:     var(--cima-alfa-14);
+  --field-placeholder: var(--cima-piedra);
+
+  --focus-ring:       var(--cima-arena);
+}
+
+/* ============ TEMA CLARO ============ */
+[data-theme="light"] {
+  --surface-canvas:   var(--cima-marfil);
+  --surface-raised:   var(--cima-blanco);
+  --surface-sunken:   var(--cima-marfil-2);
+  --surface-card:     var(--cima-blanco);
+  --surface-inset:    var(--cima-marfil-2);
+  --surface-invert:   var(--cima-negro);
+  --surface-overlay:  rgba(242, 240, 236, 0.82);
+
+  --text-primary:     var(--cima-negro);
+  --text-secondary:   #4A4844;
+  --text-muted:       #6E675D;
+  --text-accent:      #6B5A36;
+  --text-emphasis:    #6B5A36;            /* arena tostada: 5.9:1 sobre marfil */
+  --text-invert:      var(--cima-marfil);
+  --text-on-accent:   var(--cima-negro);
+
+  --border-hairline:  var(--cima-tinta-06);
+  --border-default:   var(--cima-tinta-12);
+  --border-strong:    var(--cima-tinta-24);
+  --border-accent:    rgba(185, 162, 119, 0.45);
+
+  --accent:           var(--cima-arena-hondo);
+  --accent-hover:     #A78F63;
+  --accent-press:     #8E7950;
+  --accent-wash:      rgba(216, 195, 154, 0.20);
+
+  --field-bg:         var(--cima-blanco);
+  --field-border:     var(--cima-tinta-12);
+  --field-placeholder: var(--cima-piedra);
+
+  --focus-ring:       var(--cima-arena-hondo);
+}

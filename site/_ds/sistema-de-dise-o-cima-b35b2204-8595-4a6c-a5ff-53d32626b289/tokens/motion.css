@@ -1,0 +1,31 @@
+/* CIMA — movimiento.
+   La marca no rebota. Todo entra desde la calma: opacidad + desplazamiento corto.
+   Nada de spring, nada de escala mayor a 1.02. */
+
+:root {
+  --ease-standard: cubic-bezier(0.22, 0.61, 0.36, 1); /* @kind other */
+  --ease-entrance: cubic-bezier(0.16, 1, 0.3, 1); /* @kind other */
+  --ease-exit:     cubic-bezier(0.4, 0, 1, 1); /* @kind other */
+
+  --duration-instant: 80ms; /* @kind other */
+  --duration-fast:    140ms; /* @kind other */
+  --duration-base:    220ms; /* @kind other */
+  --duration-slow:    380ms; /* @kind other */
+  --duration-reveal:  700ms; /* @kind other */
+
+  --transition-ui: all var(--duration-fast) var(--ease-standard); /* @kind other */
+  --transition-surface: all var(--duration-base) var(--ease-standard); /* @kind other */
+
+  --lift-hover: translateY(-2px); /* @kind other */
+  --press-scale: scale(0.99); /* @kind other */
+  --reveal-offset: 12px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast: 0ms; /* @kind other */
+    --duration-base: 0ms; /* @kind other */
+    --duration-slow: 0ms; /* @kind other */
+    --duration-reveal: 0ms; /* @kind other */
+  }
+}

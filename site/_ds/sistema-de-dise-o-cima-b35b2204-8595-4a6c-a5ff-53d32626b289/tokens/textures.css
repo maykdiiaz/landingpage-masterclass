@@ -1,0 +1,13 @@
+/* CIMA — texturas. Fondos old money con desgaste vintage.
+   Mineral carbón = piezas oscuras. Papel de algodón = piezas claras. El sistema es mixto:
+   en carruseles se alternan. Siempre con grano y viñeta encima. */
+
+:root {
+  --texture-mineral: url("../assets/textures/mineral-carbon.png"); /* @kind other */
+  --texture-papel:   url("../assets/textures/papel-algodon.png"); /* @kind other */
+  --texture-grain:   url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>"); /* @kind other */
+  --vignette-dark:   radial-gradient(120% 90% at 50% 40%, rgba(10,10,10,0) 45%, rgba(10,10,10,0.38) 100%); /* @kind other */
+  --vignette-papel:  radial-gradient(120% 90% at 50% 45%, rgba(120,95,55,0) 50%, rgba(120,95,55,0.20) 100%); /* @kind other */
+  --grain-dark-opacity:  0.16; /* @kind other */
+  --grain-papel-opacity: 0.22; /* @kind other */
+}

@@ -1,0 +1,78 @@
+/* CIMA — tipografía.
+   Editorial New = voz. Open Sauce One = estructura.
+   Regla dura: nunca dos serifas en la misma jerarquía; el serif titula, el sans opera. */
+
+:root {
+  --font-serif:  "PP Editorial New", "Times New Roman", Times, serif;
+  --font-sans:   "Open Sauce One", "Open Sauce Sans", system-ui, -apple-system, sans-serif;
+  --font-mono:   ui-monospace, "SFMono-Regular", "Menlo", monospace;
+
+  --font-display: var(--font-serif);
+  --font-body:    var(--font-sans);
+  --font-ui:      var(--font-sans);
+  --font-label:   var(--font-sans);
+
+  /* Escala tipográfica — razón 1.25 desde 16px, con dos saltos editoriales arriba */
+  --size-3xs: 10px;
+  --size-2xs: 11px;
+  --size-xs:  12px;
+  --size-sm:  14px;
+  --size-md:  16px;
+  --size-lg:  20px;
+  --size-xl:  25px;
+  --size-2xl: 31px;
+  --size-3xl: 39px;
+  --size-4xl: 49px;
+  --size-5xl: 61px;
+  --size-6xl: 76px;
+  --size-7xl: 96px;
+  --size-8xl: 128px;
+
+  --weight-light:    200;
+  --weight-regular:  400;
+  --weight-medium:   500;
+  --weight-semibold: 600;
+  --weight-bold:     700;
+  --weight-black:    800;
+
+  --leading-tight:   0.94;  /* display serif */
+  --leading-snug:    1.08;  /* titulares */
+  --leading-normal:  1.35;  /* UI */
+  --leading-relaxed: 1.6;   /* párrafo largo */
+  --leading-loose:   1.8;   /* etiquetas apiladas */
+
+  /* Tracking — el sistema vive del kerning abierto en mayúsculas */
+  --tracking-display: -0.02em;
+  --tracking-tight:   -0.01em;
+  --tracking-normal:  0;
+  --tracking-wide:    0.06em;
+  --tracking-label:   0.14em;  /* etiquetas y eyebrows en caja alta */
+  --tracking-mega:    0.22em;  /* pies de página, sellos */
+
+  /* Títulos — REGLA GENERAL de todo el sistema. Tres papeles por título:
+     PRIMARIO  = la palabra que carga el sentido ("viral" en "Tres cosas para ser viral").
+                 Open Sauce One Bold, SIEMPRE la más grande del título. Puede ir en Arena.
+     APOYO     = el resto de la frase. Open Sauce One Regular, ≤ 0.45× del primario.
+     ACENTO    = Editorial New itálica. Opcional, máximo uno por pieza, nunca mayor que el primario.
+     El subtítulo es pequeño (~0.4× del apoyo). Los números nunca superan el texto. */
+  --title-font:             var(--font-sans);
+  --title-primary-weight:   700;
+  --title-primary-tracking: -0.055em;
+  --title-primary-leading:  0.88; /* @kind other */
+  --title-support-weight:   400;
+  --title-support-tracking: -0.035em;
+  --title-support-scale:    0.42; /* @kind other */
+  --title-accent-font:      var(--font-serif);
+  --title-accent-scale:     0.62; /* @kind other */
+  --title-accent-tracking:  -0.02em;
+  --subtitle-ratio:         0.4; /* @kind other */
+
+  /* Roles compuestos */
+  --type-display:  var(--weight-light) var(--size-6xl)/var(--leading-tight) var(--font-serif);
+  --type-title:    var(--weight-bold) var(--size-6xl)/0.88 var(--font-sans);
+  --type-title-support: var(--weight-regular) var(--size-3xl)/1 var(--font-sans);
+  --type-heading:  var(--weight-semibold) var(--size-xl)/var(--leading-snug) var(--font-sans);
+  --type-body:     var(--weight-regular) var(--size-md)/var(--leading-relaxed) var(--font-sans);
+  --type-small:    var(--weight-regular) var(--size-sm)/var(--leading-normal) var(--font-sans);
+  --type-label:    var(--weight-medium) var(--size-2xs)/var(--leading-normal) var(--font-sans);
+}

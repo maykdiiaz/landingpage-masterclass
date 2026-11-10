@@ -1,0 +1,40 @@
+/* CIMA — espacio y retícula.
+   Base 4px. El sistema respira: por defecto elige el escalón mayor, no el menor. */
+
+:root {
+  --space-0:   0px;
+  --space-1:   4px;
+  --space-2:   8px;
+  --space-3:   12px;
+  --space-4:   16px;
+  --space-5:   20px;
+  --space-6:   24px;
+  --space-8:   32px;
+  --space-10:  40px;
+  --space-12:  48px;
+  --space-16:  64px;
+  --space-20:  80px;
+  --space-24:  96px;
+  --space-32:  128px;
+  --space-40:  160px;
+  --space-48:  192px;
+
+  /* Retícula editorial: 12 columnas, canal de 24px */
+  --grid-cols: 12; /* @kind other */
+  --grid-gutter: 24px;
+  --grid-margin: 64px;
+  --grid-margin-sm: 20px;
+
+  --measure-narrow: 44ch; /* @kind other */
+  --measure:        62ch; /* @kind other */
+  --measure-wide:   78ch; /* @kind other */
+
+  --container-sm: 720px;
+  --container-md: 1040px;
+  --container-lg: 1280px;
+  --container-xl: 1440px;
+
+  /* Marco de página: el borde interior fino que enmarca las piezas editoriales */
+  --frame-inset: 32px;
+  --frame-inset-lg: 48px;
+}
