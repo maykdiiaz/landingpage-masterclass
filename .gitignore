@@ -1,0 +1,3 @@
+site/server.log
+*.zip
+node_modules/
